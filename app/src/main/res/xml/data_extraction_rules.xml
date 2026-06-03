@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Exclude all local data from cloud backup to maintain strict offline privacy -->
+        <exclude domain="sharedpref" path="."/>
+        <exclude domain="database" path="."/>
+    </cloud-backup>
+    <device-transfer>
+        <!-- Prevent transfer of secure credentials and profile states to other devices -->
+        <exclude domain="sharedpref" path="."/>
+        <exclude domain="database" path="."/>
+    </device-transfer>
+</data-extraction-rules>

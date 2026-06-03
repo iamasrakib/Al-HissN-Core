@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Al-HissN</string>
+    <string name="app_title_ar">الحصن</string>
+    <string name="app_subtitle">Your Digital Protector</string>
+    
+    <!-- Compliance Rationales -->
+    <string name="vpn_rationale">Al-HissN uses a local VPN to filter malicious domains directly on your device. Your network traffic is never sent to remote servers.</string>
+    <string name="accessibility_rationale">Al-HissN requires Accessibility permissions to scan your screen for phishing overlays and deceptive UI elements. All scanning is done locally, and no screen content is stored or transmitted.</string>
+    <string name="overlay_rationale">The "Display over other apps" permission is used to show immediate warning banners if a malicious application opens.</string>
+    
+    <!-- UI Elements -->
+    <string name="release_setup">Release &amp; Compliance</string>
+    <string name="export_config">Export Config Backup</string>
+    <string name="wipe_data">Wipe Local Data</string>
+    <string name="system_status">System Status</string>
+    
+    <!-- Features -->
+    <string name="feature_vpn">VPN Service</string>
+    <string name="feature_accessibility">Accessibility Scanner</string>
+    <string name="feature_ime">Secure Keyboard</string>
+    <string name="device_admin_description">Enables advanced uninstall protection to secure the Al-HissN application against unauthorized removal.</string>
+</resources>
