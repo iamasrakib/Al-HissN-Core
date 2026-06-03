@@ -1,10 +1,34 @@
 .gradle_home
-build
-app/build
-core/*/build
-feature/*/build
-.gradle
+build/
+app/build/
+core/*/build/
+feature/*/build/
+.gradle/
 local.properties
 *.iml
-.idea
+.idea/
 keystore.jks
+*.jks
+*.keystore
+
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.aab
+*.apk
+output-metadata.json
+
+# IntelliJ
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Android Profiling
+*.hprof
