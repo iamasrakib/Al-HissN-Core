@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.shield
 
 import android.app.Application
@@ -9,6 +9,7 @@ import javax.inject.Inject
 
 @HiltAndroidApp
 class AlHissnApplication : Application(), Configuration.Provider {
+    // @iamasrakib - core logic
 
     @Inject
     lateinit var workerFactory: HiltWorkerFactory

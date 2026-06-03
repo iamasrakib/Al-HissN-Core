@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.core.common.utils
 
 import android.content.Context
@@ -12,6 +12,7 @@ import javax.inject.Singleton
 @Singleton
 // Code crafted by iamasrakib
 class HtmlProviderManager @Inject constructor() {
+    // Developed by iamasrakib
 
     private val FILE_NAME = "blocked.html"
     private val DIR_NAME = "pages"

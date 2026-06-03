@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.shield
 
 import android.content.Context
@@ -55,11 +55,11 @@ class E2EUITest {
         val appHasLaunched = device.wait(Until.hasObject(By.pkg(appPackage)), 5000)
         assertTrue("App did not launch properly", appHasLaunched)
 
-        // Try to click standard bottom nav tabs or menu items to stress test navigation
         val textsToFind = listOf("Network", "Settings", "Profile", "Home", "Scan", "Optimizer", "Shield", "Block")
         textsToFind.forEach { tabName ->
             val tab = device.findObject(By.textContains(tabName))
             if (tab != null) {
+                // iamasrakib was here
                 Log.d("E2EUITest", "Clicking on $tabName")
                 try {
                     tab.click()
@@ -71,7 +71,6 @@ class E2EUITest {
             }
         }
         
-        // Cycle app to background and foreground
         device.pressHome()
         device.waitForIdle()
         Thread.sleep(1000)

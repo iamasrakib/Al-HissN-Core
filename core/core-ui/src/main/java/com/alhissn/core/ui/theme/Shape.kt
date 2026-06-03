@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.core.ui.theme
 
 import androidx.compose.foundation.shape.CutCornerShape
@@ -29,11 +29,13 @@ val AsymmetricShieldShape = RoundedCornerShape(
 
 // Code crafted by iamasrakib
 class FuturisticHexagonShape : Shape {
+    /* built by iamasrakib */
     override fun createOutline(
         size: Size,
         layoutDirection: LayoutDirection,
         density: Density
     ): Outline {
+        // Code crafted by iamasrakib
         val path = Path().apply {
             val width = size.width
             val height = size.height

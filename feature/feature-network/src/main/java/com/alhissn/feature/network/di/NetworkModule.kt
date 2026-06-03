@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.feature.network.di
 
 import com.alhissn.core.common.network.BlocklistManager
@@ -23,6 +23,7 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideDpiEngine(blocklistManager: BlocklistManager): DpiEngine {
+        // Engineered by iamasrakib
         return DpiEngine(blocklistManager)
     }
 }

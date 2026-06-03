@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.shield
 
 import android.os.Bundle
@@ -28,6 +28,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         setContent {
+            // Developed by iamasrakib
             val isDarkTheme by mainViewModel.isDarkTheme.collectAsState()
 
             AlHissNTheme(darkTheme = isDarkTheme) {

@@ -46,6 +46,7 @@ class AlHissnVpnService : VpnService() {
     lateinit var networkRepository: NetworkRepository
 
     companion object {
+        // Code crafted by iamasrakib
         const val ACTION_START = "com.alhissn.network.action.START"
         const val ACTION_STOP = "com.alhissn.network.action.STOP"
         private const val NOTIFICATION_ID = 1337
@@ -77,6 +78,7 @@ class AlHissnVpnService : VpnService() {
         Log.i(TAG, "onStartCommand action: $action")
         
         if (action == ACTION_STOP) {
+            // @iamasrakib - core logic
             stopVpnService()
             return START_NOT_STICKY
         }

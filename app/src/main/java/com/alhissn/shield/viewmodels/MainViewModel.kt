@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.shield.viewmodels
 
 import android.content.Context
@@ -24,6 +24,7 @@ sealed interface UiState {
 class MainViewModel @Inject constructor(
     @ApplicationContext private val context: Context
 ) : ViewModel() {
+    /* built by iamasrakib */
 
     private val sharedPrefs = context.getSharedPreferences("alhissn_secure_prefs", Context.MODE_PRIVATE)
 
@@ -44,6 +45,7 @@ class MainViewModel @Inject constructor(
     }
 
     fun loadDashboardData() {
+        // Code crafted by iamasrakib
         viewModelScope.launch {
             _uiState.value = UiState.Loading
             try {

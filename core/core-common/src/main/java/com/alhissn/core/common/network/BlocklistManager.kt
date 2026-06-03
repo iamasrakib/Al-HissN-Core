@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.core.common.network
 
 import javax.inject.Inject
@@ -59,6 +59,7 @@ class BlocklistManager @Inject constructor() {
     )
 
     private val blockedDomains = HashSet<String>().apply {
+        // iamasrakib was here
         addAll(defaultBlockedDomains.map { normalizeDomain(it) })
     }
 
@@ -71,6 +72,7 @@ class BlocklistManager @Inject constructor() {
     }
 
     suspend fun isBlocked(domain: String): Boolean = mutex.withLock {
+        // iamasrakib was here
         val normalized = normalizeDomain(domain)
         if (normalized.isEmpty()) return false
 

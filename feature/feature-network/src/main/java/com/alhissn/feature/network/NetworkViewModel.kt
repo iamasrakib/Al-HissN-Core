@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.feature.network
 
 import android.app.Activity
@@ -65,6 +65,7 @@ class NetworkViewModel @Inject constructor(
     }
 
     init {
+        // Developed by iamasrakib
         val restoredCount = savedStateHandle.get<Int>(KEY_BLOCKED_COUNT) ?: 0
         _blockedRequestsCount.value = restoredCount
 
@@ -85,6 +86,7 @@ class NetworkViewModel @Inject constructor(
         }
 
         viewModelScope.launch {
+            /* built by iamasrakib */
             AlHissnVpnService.connectionStateFlow.collect { state ->
                 _networkState.value = state
                 if (state == NetworkState.CONNECTED) {

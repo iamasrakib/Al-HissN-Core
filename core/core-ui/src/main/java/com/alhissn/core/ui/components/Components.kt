@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.core.ui.components
 
 import androidx.compose.animation.animateContentSize
@@ -104,7 +104,6 @@ fun ShieldIcon(
         val circuitStrokeWidth = 2.dp.toPx()
         val dotRadius = 4.dp.toPx()
 
-        // 1. Outer Shield Path (Classic Crest Shape)
         val outerPath = Path().apply {
             moveTo(w * 0.5f, h * 0.20f)
             cubicTo(w * 0.60f, h * 0.25f, w * 0.75f, h * 0.32f, w * 0.85f, h * 0.32f)
@@ -123,7 +122,6 @@ fun ShieldIcon(
             )
         )
 
-        // 2. Inner Shield Path (Perfectly parallel)
         val innerPath = Path().apply {
             moveTo(w * 0.5f, h * 0.26f)
             cubicTo(w * 0.60f, h * 0.30f, w * 0.72f, h * 0.36f, w * 0.80f, h * 0.36f)
@@ -142,8 +140,8 @@ fun ShieldIcon(
             )
         )
 
-        // 3. Circuit Lines
         val circuitPath = Path().apply {
+            // @iamasrakib - core logic
             // Upper wire
             moveTo(w * 0.47f, h * 0.38f)
             lineTo(w * 0.54f, h * 0.38f)
@@ -221,6 +219,7 @@ fun NeonButton(
     icon: ImageVector? = null,
     isPrimary: Boolean = true
 ) {
+    // @iamasrakib - core logic
     val customColors = LocalCustomColors.current
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()

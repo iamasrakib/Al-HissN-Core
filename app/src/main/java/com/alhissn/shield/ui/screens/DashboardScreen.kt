@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.shield.ui.screens
 
 import android.app.Activity
@@ -39,6 +39,7 @@ fun DashboardScreen(
         contract = ActivityResultContracts.StartActivityForResult(),
         onResult = { result ->
             if (result.resultCode == Activity.RESULT_OK) {
+                // @iamasrakib - core logic
                 networkViewModel.startVpn(context)
             }
         }
@@ -87,6 +88,7 @@ fun DashboardScreen(
                             ),
                             elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
                         ) {
+                            // Code crafted by iamasrakib
                             Column(
                                 modifier = Modifier
                                     .fillMaxWidth()

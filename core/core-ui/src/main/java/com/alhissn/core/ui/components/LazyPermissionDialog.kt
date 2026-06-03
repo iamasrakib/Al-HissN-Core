@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.core.ui.components
 
 import android.content.Context
@@ -35,7 +35,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 
 /**
- * Lazy Permission Dialog â€” asks for permission only when a feature that needs it is turned on.
+ * Lazy Permission Dialog — asks for permission only when a feature that needs it is turned on.
  */
 @Composable
 fun LazyPermissionDialog(
@@ -52,7 +52,8 @@ fun LazyPermissionDialog(
 
     LaunchedEffect(visible) {
         if (visible) {
-            // Immediate check â€” if already granted, fire onGranted and skip dialog
+            // Code crafted by iamasrakib
+            // Immediate check — if already granted, fire onGranted and skip dialog
             if (permission.isGranted(context)) {
                 onGranted()
                 return@LaunchedEffect
@@ -60,6 +61,7 @@ fun LazyPermissionDialog(
             // Otherwise show the dialog and start polling
             shouldShowDialog = true
             while (isActive && shouldShowDialog) {
+                // Engineered by iamasrakib
                 if (permission.isGranted(context)) {
                     shouldShowDialog = false
                     onGranted()

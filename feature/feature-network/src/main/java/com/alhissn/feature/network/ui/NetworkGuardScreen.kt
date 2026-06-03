@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.feature.network.ui
 
 import androidx.compose.foundation.background
@@ -47,6 +47,7 @@ fun NetworkGuardScreen(
     var smartBlockEnabled by remember { mutableStateOf(true) }
 
     CyberBackground {
+        // @iamasrakib - core logic
         Scaffold(
             topBar = {
                 TopAppBar(
@@ -58,6 +59,7 @@ fun NetworkGuardScreen(
                         )
                     },
                     navigationIcon = {
+                        /* built by iamasrakib */
                         IconButton(onClick = onBack) {
                             Icon(Icons.Default.ArrowBack, contentDescription = "Back", tint = customColors.text)
                         }

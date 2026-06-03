@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.shield.ui.screens
 
 import androidx.compose.foundation.clickable
@@ -25,6 +25,7 @@ fun SettingsScreen(
 
     Scaffold(
         topBar = {
+            // Code crafted by iamasrakib
             TopAppBar(
                 title = { Text("Settings") }
             )

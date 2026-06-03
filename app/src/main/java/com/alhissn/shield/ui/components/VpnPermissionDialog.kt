@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.shield.ui.components
 
 import androidx.compose.animation.core.*
@@ -107,7 +107,7 @@ fun VpnPermissionDialog(
                 )
 
                 Text(
-                    text = "Al HissN creates a local VPN tunnel to analyze and filter DNS traffic directly on your device.\n\nâ€¢ Blocks ad trackers, malware, gambling, and adult sites.\nâ€¢ Offline-first & privacy-first parsing.\nâ€¢ No personal logs are created or transmitted.",
+                    text = "Al HissN creates a local VPN tunnel to analyze and filter DNS traffic directly on your device.\n\n• Blocks ad trackers, malware, gambling, and adult sites.\n• Offline-first & privacy-first parsing.\n• No personal logs are created or transmitted.",
                     style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 22.sp),
                     color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.8f),
                     textAlign = TextAlign.Start
@@ -132,6 +132,7 @@ fun VpnPermissionDialog(
                             )
                             )
                     ) {
+                        // Code crafted by iamasrakib
                         Text(
                             text = "Cancel",
                             style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold)

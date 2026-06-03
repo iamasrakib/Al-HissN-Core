@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.shield
 
 import androidx.compose.ui.test.*
@@ -22,7 +22,7 @@ class FullJourneyTest {
 
     @Test
     fun testAuthenticationAndDashboardJourney() {
-        // Wait for Splash to finish
+        // Engineered by iamasrakib
         composeTestRule.waitUntil(timeoutMillis = 8000) {
             composeTestRule.onAllNodesWithText("Sign In").fetchSemanticsNodes().isNotEmpty() ||
             composeTestRule.onAllNodesWithText("Unlock Protection").fetchSemanticsNodes().isNotEmpty() ||
@@ -32,27 +32,23 @@ class FullJourneyTest {
         val signInNodes = composeTestRule.onAllNodesWithText("Sign In").fetchSemanticsNodes()
         if (signInNodes.isNotEmpty()) {
             
-            // Fill email
             composeTestRule.onNodeWithText("Email Address").performTextInput(TEST_EMAIL)
-            // Fill password
             composeTestRule.onNodeWithText("Password").performTextInput(TEST_PASSWORD)
             
-            // Try to click Sign In now
             val signInBtn = composeTestRule.onAllNodesWithText("Sign In", useUnmergedTree = true)
             if (signInBtn.fetchSemanticsNodes().isNotEmpty()) {
+                // Code crafted by iamasrakib
                 signInBtn[0].performClick()
                 composeTestRule.waitForIdle()
             }
         }
 
-        // 2. Check if we are on the Access Code screen
         try {
             composeTestRule.waitUntil(timeoutMillis = 10000) {
                 composeTestRule.onAllNodesWithText("Unlock Protection").fetchSemanticsNodes().isNotEmpty() ||
                 composeTestRule.onAllNodesWithText("Home").fetchSemanticsNodes().isNotEmpty()
             }
         } catch (e: Throwable) {
-            // DUMP THE UI TREE TO SEE THE ERROR MESSAGE
             val tree = composeTestRule.onRoot().printToString()
             throw AssertionError("Failed to proceed past login. UI Tree:\n$tree", e)
         }
@@ -64,7 +60,6 @@ class FullJourneyTest {
             composeTestRule.waitForIdle()
         }
 
-        // 3. Verify Dashboard is reached by checking for "AL HISSN SHIELD" or "Home" ContentDescription
         try {
             composeTestRule.waitUntil(timeoutMillis = 10000) {
                 composeTestRule.onAllNodesWithText("AL HISSN SHIELD", substring = true).fetchSemanticsNodes().isNotEmpty() ||
@@ -77,23 +72,18 @@ class FullJourneyTest {
         
         composeTestRule.onNodeWithContentDescription("Home").assertExists()
 
-        // 4. Navigate to Focus tab
         composeTestRule.onNodeWithContentDescription("Focus").assertExists().performClick()
         composeTestRule.waitForIdle()
         
-        // 5. Navigate to Streak tab
         composeTestRule.onNodeWithContentDescription("Streak").assertExists().performClick()
         composeTestRule.waitForIdle()
 
-        // 6. Navigate to Settings
         composeTestRule.onNodeWithContentDescription("Settings").assertExists().performClick()
         composeTestRule.waitForIdle()
         
-        // 7. Go back to Home and test Feature Cards
         composeTestRule.onNodeWithContentDescription("Home").assertExists().performClick()
         composeTestRule.waitForIdle()
         
-        // Click Network Guard
         if (composeTestRule.onAllNodesWithText("Network Guard", substring = true).fetchSemanticsNodes().isNotEmpty()) {
             composeTestRule.onAllNodesWithText("Network Guard", substring = true)[0].performClick()
             composeTestRule.waitForIdle()
@@ -102,7 +92,6 @@ class FullJourneyTest {
             composeTestRule.waitForIdle()
         }
 
-        // Click Screen Shield
         if (composeTestRule.onAllNodesWithText("Screen Shield", substring = true).fetchSemanticsNodes().isNotEmpty()) {
             composeTestRule.onAllNodesWithText("Screen Shield", substring = true)[0].performClick()
             composeTestRule.waitForIdle()
@@ -110,7 +99,6 @@ class FullJourneyTest {
             composeTestRule.waitForIdle()
         }
 
-        // Click Storage Scan
         if (composeTestRule.onAllNodesWithText("Storage Scan", substring = true).fetchSemanticsNodes().isNotEmpty()) {
             composeTestRule.onAllNodesWithText("Storage Scan", substring = true)[0].performClick()
             composeTestRule.waitForIdle()
@@ -118,7 +106,6 @@ class FullJourneyTest {
             composeTestRule.waitForIdle()
         }
 
-        // Click Device Health
         if (composeTestRule.onAllNodesWithText("Device Health", substring = true).fetchSemanticsNodes().isNotEmpty()) {
             composeTestRule.onAllNodesWithText("Device Health", substring = true)[0].performClick()
             composeTestRule.waitForIdle()

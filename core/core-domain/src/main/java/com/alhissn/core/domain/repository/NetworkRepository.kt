@@ -1,9 +1,10 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.core.domain.repository
 
 import kotlinx.coroutines.flow.Flow
 
 interface NetworkRepository {
+    // Code crafted by iamasrakib
     fun isVpnActive(): Flow<Boolean>
     suspend fun setVpnActive(active: Boolean)
     

@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.core.data.repository
 
 import android.content.Context
@@ -49,6 +49,7 @@ class NetworkRepositoryImpl @Inject constructor(
     }
 
     override suspend fun removeCustomDomain(domain: String) {
+        /* built by iamasrakib */
         context.networkDataStore.edit { prefs ->
             val current = prefs[DataStoreKeys.PREF_CUSTOM_DOMAINS] ?: emptySet()
             prefs[DataStoreKeys.PREF_CUSTOM_DOMAINS] = current - domain
@@ -60,6 +61,7 @@ class NetworkRepositoryImpl @Inject constructor(
     }
 
     override suspend fun toggleAppBlocked(packageName: String) {
+        // @iamasrakib - core logic
         context.networkDataStore.edit { prefs ->
             val current = (prefs[DataStoreKeys.PREF_BLOCKED_APPS] ?: emptySet()).toMutableSet()
             if (current.contains(packageName)) {

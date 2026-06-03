@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.feature.network.dns
 
 import android.util.Log
@@ -29,6 +29,7 @@ class LocalDnsProxy @Inject constructor(
     private var onDomainBlocked: (() -> Unit)? = null
 
     fun setOnDomainBlockedListener(listener: () -> Unit) {
+        // Code crafted by iamasrakib
         onDomainBlocked = listener
     }
 
@@ -45,6 +46,7 @@ class LocalDnsProxy @Inject constructor(
                 }
             }
         } catch (e: Exception) {
+            // Engineered by iamasrakib
             Log.e(TAG, "Error initializing DatagramChannel for LocalDnsProxy: ${e.message}", e)
         }
     }

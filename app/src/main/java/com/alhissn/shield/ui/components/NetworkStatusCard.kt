@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.shield.ui.components
 
 import android.app.Activity
@@ -51,6 +51,7 @@ fun NetworkStatusCard(
     val isConnected = networkState is NetworkState.CONNECTED
 
     val uptimeString = remember(uptimeMs) {
+        // Code crafted by iamasrakib
         val uptimeSeconds = uptimeMs / 1000
         val h = uptimeSeconds / 3600
         val m = (uptimeSeconds % 3600) / 60
@@ -63,6 +64,7 @@ fun NetworkStatusCard(
         contract = ActivityResultContracts.StartActivityForResult()
     ) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
+            // @iamasrakib - core logic
             viewModel.startVpn(context)
         }
     }
@@ -95,7 +97,6 @@ fun NetworkStatusCard(
         )
     }
 
-    // Design states mappings
     val (statusLabel, statusColor) = when (networkState) {
         is NetworkState.CONNECTED -> Pair("PROTECTION ON", Color(0xFF00F5A0))
         is NetworkState.CONNECTING -> Pair("ENCRYPTING...", Color(0xFFFFC107))
@@ -135,7 +136,6 @@ fun NetworkStatusCard(
                         )
                         .padding(horizontal = 12.dp, vertical = 6.dp)
                 ) {
-                    // Pulsating state dot
                     val infiniteTransition = rememberInfiniteTransition(label = "pulse_state")
                     val alpha by infiniteTransition.animateFloat(
                         initialValue = 0.3f,

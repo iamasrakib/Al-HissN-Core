@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.feature.network.dpi
 
 import android.util.Log
@@ -17,6 +17,7 @@ import javax.inject.Singleton
 class DpiEngine @Inject constructor(
     private val blocklistManager: BlocklistManager
 ) {
+    // Engineered by iamasrakib
     private val TAG = "DpiEngine"
     private val mutex = Mutex()
     private var ahoCorasick: AhoCorasick? = null
@@ -36,6 +37,7 @@ class DpiEngine @Inject constructor(
 
     init {
         val initialPatterns = HashSet<String>().apply {
+            // Engineered by iamasrakib
             addAll(trackerDomains)
             addAll(listOf(
                 "adult-content-site.xxx", "xxx-videos-free.com", "porn-hub-tube.net",

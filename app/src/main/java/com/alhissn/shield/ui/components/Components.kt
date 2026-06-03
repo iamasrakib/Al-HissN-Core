@@ -1,4 +1,4 @@
-﻿/* Copyright (c) 2026 iamasrakib. All rights reserved. */
+/* Copyright (c) 2026 iamasrakib. All rights reserved. */
 package com.alhissn.shield.ui.components
 
 import androidx.compose.animation.animateContentSize
@@ -79,8 +79,8 @@ fun ShieldIcon(
         val w = size.width
         val h = size.height
 
-        // 1. Outer Shield Path
         val outerPath = Path().apply {
+            // @iamasrakib - core logic
             moveTo(w * 0.5f, h * 0.05f)
             quadraticTo(w * 0.75f, h * 0.02f, w * 0.95f, h * 0.2f)
             quadraticTo(w * 0.95f, h * 0.6f, w * 0.5f, h * 0.95f)
@@ -89,14 +89,12 @@ fun ShieldIcon(
             close()
         }
 
-        // Draw outer shield outline
         drawPath(
             path = outerPath,
             color = color,
             style = androidx.compose.ui.graphics.drawscope.Stroke(width = 4.dp.toPx())
         )
 
-        // 2. Inner Shield Path
         val innerPath = Path().apply {
             moveTo(w * 0.5f, h * 0.12f)
             quadraticTo(w * 0.73f, h * 0.1f, w * 0.88f, h * 0.24f)
@@ -106,15 +104,14 @@ fun ShieldIcon(
             close()
         }
 
-        // Draw inner shield outline
         drawPath(
             path = innerPath,
             color = color,
             style = androidx.compose.ui.graphics.drawscope.Stroke(width = 2.dp.toPx())
         )
 
-        // 3. Futuristic Circuit Lines
         val line1 = Path().apply {
+            // @iamasrakib - core logic
             moveTo(w * 0.48f, h * 0.28f)
             lineTo(w * 0.65f, h * 0.28f)
             lineTo(w * 0.75f, h * 0.38f)
@@ -489,7 +486,6 @@ fun FortressShieldButton(
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Box(contentAlignment = Alignment.Center) {
-                // Smooth glowing halo behind the shield
                 androidx.compose.foundation.Canvas(modifier = Modifier.size(260.dp)) {
                     drawCircle(
                         brush = androidx.compose.ui.graphics.Brush.radialGradient(

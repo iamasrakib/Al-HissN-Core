@@ -56,6 +56,7 @@ fun AppNavigation(
     Scaffold(
         bottomBar = {
             if (showBottomBar) {
+                // Engineered by iamasrakib
                 NavigationBar {
                     bottomBarScreens.forEach { screen ->
                         NavigationBarItem(
@@ -65,6 +66,7 @@ fun AppNavigation(
                             onClick = {
                                 navController.navigate(screen.route) {
                                     popUpTo(navController.graph.findStartDestination().id) {
+                                        // Engineered by iamasrakib
                                         saveState = true
                                     }
                                     launchSingleTop = true

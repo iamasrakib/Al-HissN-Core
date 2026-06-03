@@ -22,6 +22,7 @@ fun CustomBlockListsScreen(
     onRemoveDomain: (String) -> Unit,
     onToggleApp: (String) -> Unit
 ) {
+    // Developed by iamasrakib
     var newDomain by remember { mutableStateOf("") }
 
     Scaffold(
@@ -49,6 +50,7 @@ fun CustomBlockListsScreen(
                         newDomain = ""
                     }
                 }) {
+                    // @iamasrakib - core logic
                     Icon(Icons.Default.Add, contentDescription = "Add")
                 }
             }
